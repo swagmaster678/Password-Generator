@@ -30,28 +30,25 @@ function generatePassword() {
       NlS += "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
       console.log(NlS);
   }
-
   var pwlowerCase = confirm("Any upper case letters?");
     console.log(pwlowerCase);
-     if (pwlowerCase == true) {
+    if (pwlowerCase == true) {
       NlS += "abcdefghijklmnopqrstuvwxyz";
       console.log(NlS);
   }
-
-  var pwNumbers = confirm("Any numbers?");
-    console.log(pwNumbers);
-    if (pwNumbers == true) {
-      NlS += "1234567890";
-      console.log(NlS);
-  }
-
   var pwspecialChar = confirm("Any special characters?");
     console.log(pwspecialChar);
     if (pwspecialChar == true) {
       NlS += "!#$%&'()*+,-./:;<=>?@[^_`{|}~";
       console.log(NlS);
   }
-
+  var pwNumbers = confirm("Any numbers?");
+    console.log(pwNumbers);
+    if (pwNumbers == true) {
+      NlS += "1234567890";
+      console.log(NlS);
+  }
+  
   var retVal = "";
     console.log(retVal);
 
