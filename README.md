@@ -10,7 +10,7 @@
     # Screenshot of the working web page:
     ![Password Generator](images/homework_Password-Generator_index.html.png) 
 
- 
+ C:\Users\brice\Desktop\homework\Password-Generator\images\Users_brice_Desktop_homework_Password-Generator_index.html .png
 # Using script.js
 * Clicking "Generate Password" will generate a secure password.
 * Has series of prompts for password criteria.
