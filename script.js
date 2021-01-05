@@ -10,67 +10,57 @@ var password = generatePassword();
 passwordText.value = password;
 
 }
+function generatePassword() { 
 
-function generatePassword () { 
-  var passwordLength = Number(prompt("How many characters would you like in your password?"));
-      console.log(passwordLength);
+  var pwLength = Number(prompt("How many characters would you like in your password?"));
+      console.log(pwLength);
     
     if (pwLength < 8)  {     
     alert("Your password must have at least 8 characters."); 
-      console.log(pwLength);
   }  
   
     if (pwLength > 128)  {     
     alert("Your password must have at least 128 characters."); 
-      console.log(pwLength);
   }  
-  var NLS = ""
-  var pwlowerCase = confirm("Any lower case letters?")
   
-    if (pwlowerCase == true){
-      NLS += "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-      console.log(NLS);
-  }
-    else if(pwlowerCase = false) {
-     console.log(pwlowerCase);
-   }
+  var NlS = "";
   
-  var pwupperCase = confirm("Any upper case letters?")
-  
-    if (pwupperCase == true){
-      NLS += "abcdefghijklmnopqrstuvwxyz";
-      console.log(pwupperCase);
-  }
-    else if(pwupperCase = false) {
+  var pwupperCase = confirm("Any lower case letters?");
     console.log(pwupperCase);
-  }
-  
-  var pwnumBers = confirm("Any numbers?")
-  
-    if (pwnumBers == true){
-      NLS += "1234567890";
-      console.log(pwnumBers);
-  }
-    else if(pwnumBers = false) {
-    console.log(pwnumBers);
-  }
-  
-  var pwspecialChar = confirm("Any special characters?")
-  
-    if (pwspecialChar == true){
-      NLS += "!#$%&'()*+,-./:;<=>?@[^_`{|}~";
-      console.log(pwspecialChar);
-  }
-    else if(pwspecialChar = false) {
-    console.log(pwspecialChar);
+    if (pwupperCase == true) {
+      NlS += "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+      console.log(NlS);
   }
 
-  for (var i = 0; i < passwordLength; i++) {
-    //picks a character within charSet at index of random number
-    retVal += charSet.charAt(Math.floor(Math.random() * charSet.length));
+  var pwlowerCase = confirm("Any upper case letters?");
+    console.log(pwlowerCase);
+     if (pwlowerCase == true) {
+      NlS += "abcdefghijklmnopqrstuvwxyz";
+      console.log(NlS);
+  }
+
+  var pwnumBers = confirm("Any numbers?");
+    console.log(pwnumBers);
+    if (pwnumBers == true) {
+      NlS += "1234567890";
+      console.log(NlS);
+  }
+
+  var pwspecialChar = confirm("Any special characters?");
+    console.log(pwspecialChar);
+    if (pwspecialChar == true) {
+      NlS += "!#$%&'()*+,-./:;<=>?@[^_`{|}~";
+      console.log(NlS);
+  }
+
+  var retVal = "";
+    console.log(retVal);
+
+  for (var i = 0; i < pwLength; i++) {
+    retVal += NlS.charAt(Math.floor(Math.random() * NlS.length));
   }
   return retVal;  
+
 }
-  console.log(generatePassword());
   // Add event listener to generate button
   generateBtn.addEventListener("click", writePassword);
