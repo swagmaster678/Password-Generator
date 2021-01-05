@@ -8,7 +8,7 @@
     [My Repository](https://github.com/swagmaster678/Password-Generator)
 
     # Screenshot of the working web page:
-    ![Password Generator](images/Password-Generator\Users_brice_Desktop_homework_Password-Generator_index.html.png) 
+    ![Password Generator](images/C:\Users\brice\Desktop\homework\Password-Generator\images\Users_brice_Desktop_homework_Password-Generator_index.html.png) 
 
  
 # Using script.js
