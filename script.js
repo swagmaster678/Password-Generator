@@ -12,11 +12,8 @@ passwordText.value = password;
 }
 
 function generatePassword () { 
-  var text = "";
-  var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+";
-  for (var i = 0; i < pwLength; i++)
-    text += possible.charAt(Math.floor(Math.random() * possible.length));
-    var pwLength = Number(prompt("How long do you want you password to be?"));
+  var passwordLength = Number(prompt("How many characters would you like in your password?"));
+      console.log(passwordLength);
     
     if (pwLength < 8)  {     
     alert("Your password must have at least 8 characters."); 
@@ -31,9 +28,10 @@ function generatePassword () {
   var pwlowerCase = confirm("Any lower case letters?")
   
     if (pwlowerCase == true){
-    console.log(pwlowerCase);
+      numBers += "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+      console.log(numBers);
   }
-   else if(pwlowerCase = false) {
+    else if(pwlowerCase = false) {
      console.log(pwlowerCase);
    }
   
@@ -63,9 +61,13 @@ function generatePassword () {
     else if(pwspecialChar = false) {
     console.log(pwspecialChar);
   }
-    return text;
+
+  for (var i = 0; i < passwordLength; i++) {
+    //picks a character within charSet at index of random number
+    retVal += charSet.charAt(Math.floor(Math.random() * charSet.length));
   }
-  
+  return retVal;  
+}
   console.log(generatePassword());
   // Add event listener to generate button
   generateBtn.addEventListener("click", writePassword);
