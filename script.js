@@ -1,4 +1,5 @@
 var generateBtn = document.querySelector("#generate");
+// Moved var passwordText = document.querySelector("#password"); for organization.
 var passwordText = document.querySelector("#password");
 
 // Write password to the #password input
@@ -10,7 +11,7 @@ passwordText.value = password;
 
 }
 function generatePassword() { 
-
+// Had to create a function for generatePassword().
   var pwLength = Number(prompt("How many characters would you like in your password?"));
       console.log(pwLength);
     
@@ -21,9 +22,9 @@ function generatePassword() {
     if (pwLength > 128)  {     
     alert("Your password must have at least 128 characters."); 
   }  
-  
+   // Made the password length between 8 and 128.
   var NlS = "";
-  
+  // Variable NlS console logging the confirmations to use for the randomized password.
   var pwupperCase = confirm("Any lower case letters?");
     console.log(pwupperCase);
     if (pwupperCase == true) {
@@ -48,10 +49,10 @@ function generatePassword() {
       NlS += "1234567890";
       console.log(NlS);
   }
-  
+  // Made variables for Numbers,upper and lower case letters, and special characters.
   var retVal = "";
     console.log(retVal);
-
+  // Made a for loop to gather all the variables and put it in a string.
   for (var i = 0; i < pwLength; i++) {
     retVal += NlS.charAt(Math.floor(Math.random() * NlS.length));
   }
