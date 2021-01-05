@@ -24,12 +24,12 @@ function generatePassword () {
     alert("Your password must have at least 128 characters."); 
       console.log(pwLength);
   }  
-    
+  var NLS = ""
   var pwlowerCase = confirm("Any lower case letters?")
   
     if (pwlowerCase == true){
-      numBers += "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-      console.log(numBers);
+      NLS += "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+      console.log(NLS);
   }
     else if(pwlowerCase = false) {
      console.log(pwlowerCase);
@@ -38,7 +38,8 @@ function generatePassword () {
   var pwupperCase = confirm("Any upper case letters?")
   
     if (pwupperCase == true){
-    console.log(pwupperCase);
+      NLS += "abcdefghijklmnopqrstuvwxyz";
+      console.log(pwupperCase);
   }
     else if(pwupperCase = false) {
     console.log(pwupperCase);
@@ -47,7 +48,8 @@ function generatePassword () {
   var pwnumBers = confirm("Any numbers?")
   
     if (pwnumBers == true){
-    console.log(pwnumBers);
+      NLS += "1234567890";
+      console.log(pwnumBers);
   }
     else if(pwnumBers = false) {
     console.log(pwnumBers);
@@ -56,7 +58,8 @@ function generatePassword () {
   var pwspecialChar = confirm("Any special characters?")
   
     if (pwspecialChar == true){
-    console.log(pwspecialChar);
+      NLS += "!#$%&'()*+,-./:;<=>?@[^_`{|}~";
+      console.log(pwspecialChar);
   }
     else if(pwspecialChar = false) {
     console.log(pwspecialChar);
