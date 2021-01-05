@@ -1,7 +1,6 @@
 var generateBtn = document.querySelector("#generate");
 var passwordText = document.querySelector("#password");
 
-
 // Write password to the #password input
 function writePassword() {
 var password = generatePassword();
@@ -39,9 +38,9 @@ function generatePassword() {
       console.log(NlS);
   }
 
-  var pwnumBers = confirm("Any numbers?");
-    console.log(pwnumBers);
-    if (pwnumBers == true) {
+  var pwNumbers = confirm("Any numbers?");
+    console.log(pwNumbers);
+    if (pwNumbers == true) {
       NlS += "1234567890";
       console.log(NlS);
   }
