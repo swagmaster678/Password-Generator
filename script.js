@@ -49,7 +49,7 @@ function generatePassword() {
       NlS += "1234567890";
       console.log(NlS);
   }
-  // Made variables for Numbers,upper and lower case letters, and special characters.
+  // Made a return value variable for Numbers, upper and lower case letters, and special characters.
   var retVal = "";
     console.log(retVal);
   // Made a for loop to gather all the variables and put it in a string.
